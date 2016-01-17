@@ -31,12 +31,19 @@
 #define eS_PORTD6 36
 #define eS_PORTD7 37
 
-#ifndef D0
-#define D0 eS_PORTA0
-#define D1 eS_PORTA1
-#define D2 eS_PORTA2
-#define D3 eS_PORTA3
-#endif
+
+#define D0 eS_PORTB0
+#define D1 eS_PORTB1
+#define D2 eS_PORTB2
+#define D3 eS_PORTB3
+#define D4 eS_PORTB4						//These are pins of the LCD to be connected to the specified AVR pin
+#define D5 eS_PORTB5						//eg. D4 of LCD to be connected with PortB PB4
+#define D6 eS_PORTB6
+#define D7 eS_PORTB7
+#define RS eS_PORTD0
+#define EN eS_PORTD1
+//Connect R/W pin to ground
+
 
 #include<util/delay.h>
 
