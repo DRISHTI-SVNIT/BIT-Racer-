@@ -17,7 +17,7 @@ char r[4];
 
 int main(void)
 {
-	DDRB |= 0b11111111;
+	DDRB |= 0b11111111;								//Connect LCD data pins on PORTB
 	DDRD |= 0b00000011;								//Setting output for RS and EN 
 	DDRD &= ~(1<<PIND2);								//Button at pind2 for ext interrupt
 	PORTD |= (1<<PIND2);
