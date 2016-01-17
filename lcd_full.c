@@ -2,12 +2,6 @@
 
 
 #define F_CPU 1000000UL
-#define D4 eS_PORTB4								//These are pins of the LCD to be connected to the specified AVR pin 
-#define D5 eS_PORTB5								//eg. D4 of LCD to be connected with PortB Pin0
-#define D6 eS_PORTB6
-#define D7 eS_PORTB7
-#define RS eS_PORTB0
-#define EN eS_PORTB2
 #include<avr/io.h>								//including required libraries
 #include<util/delay.h>
 #include<stdlib.h>
@@ -23,7 +17,8 @@ char r[4];
 
 int main(void)
 {
-	DDRB |=0b11111111;
+	DDRB |= 0b11111111;
+	DDRD |= 0b00000011;								//Setting output for RS and EN 
 	DDRD &= ~(1<<PIND2);								//Button at pind2 for ext interrupt
 	PORTD |= (1<<PIND2);
 	GICR = (1<<INT0);								// Enable INT0
