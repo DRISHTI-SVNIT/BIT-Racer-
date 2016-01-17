@@ -41,7 +41,8 @@
 #define D6 eS_PORTB6
 #define D7 eS_PORTB7
 #define RS eS_PORTD0
-#define EN eS_PORTD2
+#define EN eS_PORTD1
+//Connect R/W pin to ground
 
 
 #include<util/delay.h>
